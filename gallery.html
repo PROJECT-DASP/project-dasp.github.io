@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DASP</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="images/dasp-favicon-color.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,700,800">
+  <style>
+    body {
+        background-color: #333;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        /* Add other background properties as needed */
+    }
+    .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        
+    p {
+  height: 100px;
+  width: 500px;
+  margin: 100px auto;
+  position: relative;
+}
+
+img {
+  height: 100px;
+  position: absolute;
+  left: 0;
+  offset-path: path('m 0 50 q 50-30 100-30 t 100 30 100 0 100-30 100 30');
+  box-shadow: 1px 1px 3px #0008;
+  transition: transform .4s ease-out, offset-path .4s cubic-bezier(.77,-1.17,.75,.84),box-shadow .3s, z-index .3s;
+  z-index: 0;
+}
+
+img:hover {
+  transform: scale(4);
+  /* on hover, the path gets a bit shorter & flattened & shifted to left/bottom a bit for nicer movement */
+  offset-path: path('m 5 65 q 45-0 90-0 t 90 0 90 0 90-0 90 0');
+  box-shadow: 3px 4px 10px #0006;
+  /* ensures that image gets on top of stack at the start of "popping" animation
+     and gets back at the end of getting back. With smaller value, 2 different transitions would be needed */
+  z-index: 999;
+}
+
+/* 3 images */
+img:nth-last-child(3):first-child {
+  offset-distance: 17%;
+}
+img:nth-last-child(2):nth-child(2) {
+  offset-distance: 49%;
+}
+img:last-child:nth-child(3) {
+  offset-distance: 81%;
+}
+
+/* 4 images */
+img:nth-last-child(4):first-child {
+  offset-distance: 10%;
+}
+img:nth-last-child(3):nth-child(2) {
+  offset-distance: 35%;
+}
+img:nth-last-child(2):nth-child(3) {
+  offset-distance: 65%;
+}
+img:last-child:nth-child(4) {
+  offset-distance: 90%;
+}
+
+/* 5 images */
+img:nth-last-child(5):first-child {
+  offset-distance: 0%;
+}
+img:nth-last-child(4):nth-child(2) {
+  offset-distance: 25%;
+}
+img:nth-last-child(3):nth-child(3) {
+  offset-distance: 51%;
+}
+img:nth-last-child(2):nth-child(4) {
+  offset-distance: 75%;
+}
+img:last-child:nth-child(5) {
+  offset-distance: 100%;
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<div class="navbar">
+    <a href="index.html">Home</a>
+</div>
+<div class="project-mary-content">
+  <!-- <ul class="project-mary-panel">
+    <li class="project-mary-panel-item">
+      <time class="project-mary-time" datetime="2019-03-15">rendered views</time>
+    </li>
+    <li class="project-mary-panel-item">
+      <div class="project-mary-tag">elevation</div>
+    </li>
+  </ul> -->
+  <!-- <h3 class="project-mary-title">Architecture</h3> -->
+  <!-- Gallery container -->
+  <div class="gallery-container">
+    <div class="gallery-images">
+      <!-- Add your images here -->
+      <p>
+        <!-- <a href="images/rendered/Image2.png"> -->
+            <img src="images/rendered/slide-2-1339x72.png" alt=""> 
+            <img src="images/rendered/Image2.png" alt="">
+        <img src="images/rendered/Image3.png" alt="">
+      <img src="images/rendered/Image4.png" alt="">
+      <img src="images/rendered/Image6.png" alt="">  
+     
+      </p>
+      
+      <p>
+        <img src="images/rendered/ADMINISTRATIVE ROOM.png" alt="">
+        <img src="images/rendered/OFFICE.png">
+        
+        <img src="images/rendered/FACULTLY ROOM.png" alt="">
+      
+      </p>
+    
+      <p>
+        <img src="images/rendered/lab.png">
+        <img src="images/rendered/lect.png">
+        <img src="images/rendered/library.png">
+        <img src="images/rendered/SEMINAR HALL.png">
+        <img src="images/rendered/sick room.png">
+       
+      </p>
+      <p>
+        <img src="images/rendered/SPORTS ROOM.png">
+        <img src="images/rendered/DRAWING HALL.png" alt="">
+        <img src="images/rendered/Image5.png" alt="">
+     
+        <img src="images/rendered/site.png" alt="">
+      </p>
+      
+      <!-- Add more images as needed -->
+    </div>
+  </div>
+</div>
+
+<script>
+  // Add JavaScript for LightGallery initialization here
+</script>
+
+</body>
+</html>
